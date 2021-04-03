@@ -8,7 +8,7 @@ Projeto criado como desafio via varejo
 
 Possui APIs que consomen banco de dados NSQL mongoDB
 
-# Collectios das Apis: 
+# Collections das Apis: 
 Swagger v3.0: url: [Swagger](http://localhost:8080/swagger-ui/index.html)
 
 Postman: [Postman](https://github.com/paullooabreu/desafio-spring-mongo-/blob/main/via-varejo.postman_collection.json)
