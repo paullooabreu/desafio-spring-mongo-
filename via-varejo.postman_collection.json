@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "7cd7dae9-f533-42a1-be83-5a2f088c709e",
+		"name": "via-varejo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Cliente",
+			"item": [
+				{
+					"name": "Salvar Clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t\r\n{\r\n  \"nomeCliente\": \"Teste\",\r\n  \"cpfCliente\": \"13524496091\",\r\n  \"cidadeCliente\": \"São Paulo\",\r\n  \"ufCliente\":\"SP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/desafio/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Cliente por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/desafio/clientes/6067b632b8f35d22d97de4ae",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"clientes",
+								"6067b632b8f35d22d97de4ae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar todos os Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/desafio/clientes?offset=0&limit=05",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"clientes"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "05"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Cliente",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n  \"nomeCliente\": \"Teste update\",\r\n  \"cidadeCliente\": \"Curitiba\",\r\n  \"ufCliente\":\"PR\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/desafio/clientes/6067b665b8f35d22d97de4af",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"clientes",
+								"6067b665b8f35d22d97de4af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir um Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/desafio/clientes/6067b665b8f35d22d97de4af",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"clientes",
+								"6067b665b8f35d22d97de4af"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Apolice",
+			"item": [
+				{
+					"name": "Salvar Apolice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fimVigencia\": \"2021-04-30\",\r\n  \"idCliente\": \"6067b632b8f35d22d97de4ae\",\r\n  \"inicioVigencia\": \"2021-03-01\",\r\n  \"placaVeiculo\": \"TST1515\",\r\n  \"valorApolice\": 155.55\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/desafio/apolices",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"apolices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Apolices por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/desafio/apolices/6067b76fb8f35d22d97de4b0",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"apolices",
+								"6067b76fb8f35d22d97de4b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Apolices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/desafio/apolices?offset=0&limit=5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"apolices"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarApolice",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fimVigencia\": \"2021-04-21\",\r\n  \"idCliente\": \"6067b76fb8f35d22d97de4b0\",\r\n  \"inicioVigencia\": \"2021-04-05\",\r\n  \"placaVeiculo\": \"OOK1111\",\r\n  \"valorApolice\": 1669.60\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/desafio/apolices/6067b76fb8f35d22d97de4b0",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"apolices",
+								"6067b76fb8f35d22d97de4b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Apolice",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/desafio/apolices/6067b76fb8f35d22d97de4b0",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"apolices",
+								"6067b76fb8f35d22d97de4b0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Relatorio Apolice",
+			"item": [
+				{
+					"name": "Buscar Apolice por Numero",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/desafio/relatorio-apolices/4725541",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desafio",
+								"relatorio-apolices",
+								"4725541"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
